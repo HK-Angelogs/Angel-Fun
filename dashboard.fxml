@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../static/bg2.png" />
+         </image>
+      </ImageView>
+      <Box depth="100" height="200.0" layoutX="300.0" layoutY="244.0" width="200.0">
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Box>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="200.0" layoutY="14.0">
+         <image>
+            <Image url="@../static/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="pickLabel" layoutX="250.0" layoutY="352.0" text="PICK A GAME" textFill="#f23557" styleClass="pick-label">
+   <font>
+      <Font name="Rockwell Bold" size="14.0" />
+   </font>
+   <effect>
+      <DropShadow>
+         <color>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </color>
+      </DropShadow>
+   </effect>
+</Label>
+      <Button layoutX="424.0" layoutY="231.0" mnemonicParsing="false" stylesheets="@../stylesheets/style_2.css" text="NEXT" textFill="#f23557" styleClass="button">
+         <font>
+            <Font name="Rockwell Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+<Button layoutX="87.0" layoutY="231.0" mnemonicParsing="false" text="PREVIOUS" textFill="#f23557">
+   <font>
+      <Font name="Rockwell Bold" size="14.0" />
+   </font>
+   <effect>
+      <DropShadow>
+         <color>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </color>
+      </DropShadow>
+   </effect>
+</Button>
+
+<MenuButton fx:id="usernameMenu" layoutX="32.0" layoutY="36.0" text="@username" styleClass="username-btn">
+   <font>
+      <Font name="Rockwell Bold" size="13.0" />
+   </font>
+   <effect>
+      <DropShadow>
+         <color>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </color>
+      </DropShadow>
+   </effect>
+   <items>
+      <MenuItem fx:id="highscoreItem" text="Highscore" />
+      <MenuItem fx:id="logoutItem" text="Logout" />
+   </items>
+</MenuButton>
+
+   </children>
+</Pane>
